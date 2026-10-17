@@ -8,27 +8,33 @@
 </head>
 <body>
     <header>
-        <div class="baner">
-
-        </div>
+        <div class="baner sombraInterna"></div>
         <nav>
-
+            <ul class="flex between">
+                <li><a href="#">Músicas</a></li>
+                <li><a href="#">Opiniões</a></li>
+                <li><a href="#">Desenhos</a></li>
+                <li><a href="#">Batatonismo</a></li>
+                <li><a href="#">Histórias</a></li>
+                <li><a href="#">Contato</a></li>
+                <li><button>Menu</button></li>
+                <li><button>Yuri</button></li>
+                <li><button>Isaque</button></li>
+            </ul>
         </nav>
     </header>
-   <main>
-    <div id="paiiframes">
-
-        <article>
-            <h1>Artigo</h1>
-        </article>
-
+    <main>
+        <div id="paiiframes">
+            <article class="sombraExterna">
+                <h1>Artigo</h1>
+            </article>
             <div id="iframedebaixo">
-                <iframe src="iframe1.html" frameborder="0"><h1>ifram1</h1></iframe>
-                <iframe src="iframe2.html" frameborder="0"><h1>ifram2</h1></iframe>
+                <iframe src="iframe1.html" class="sombraInterna" frameborder="0"></iframe>
+                <iframe src="iframe2.html" class="sombraInterna" frameborder="0"></iframe>
             </div>
-    </div>
-    <iframe src="iframe3.html" frameborder="0"><h1>ifram3</h1></iframe>
-   </main>
-   <footer></footer>
+        </div>
+        <iframe src="iframe3.html" class="sombraInterna" frameborder="0"></iframe>
+    </main>
+    <footer></footer>
 </body>
 </html>
