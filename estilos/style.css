@@ -10,14 +10,14 @@
 }
 
 :root {
-    --bk_body: #646661;
-    --bk_nav: #66485D;
+    --bk_body: #2d3028;
+    --bk_nav: #8a1567;
     --bk_footer: #35663C;
     --card_bg: #4a4c47;
     --border_color: #5D1E66;
-    --link_color: #0D6624;
-    --link_hover_color: #FFFFFF;
-    --bk_button: #0D6624;
+    --link_color: #07c239;
+    --link_hover_color: #cdec05;
+    --bk_button: #301120;
     --text_button: #FFFFFF;
     --text_color: #FFFFFF;
 
@@ -30,67 +30,101 @@
    2. ESTRUTURA DE LAYOUT (BODY) - BLOCOS COLADOS
    ================================================================ */
 body {
-    max-width: 800px;
-    margin: 0 auto;
-    width: 100%;
-    min-height: 100vh;
-
+    width: 100vw;
+    height: 100vh;
     display: grid;
-    grid-template-rows: 140px 40px 1fr 80px;
-    grid-template-columns: 1fr 200px;
-    
-    grid-template-areas: 
-        "header  header"
-        "nav     nav"
-        "content sidebar"
-        "footer  footer";
-
+    grid-template-rows: 40px 140px 40px 1fr 40px 40px;
+    grid-template-columns: 1fr 800px 1fr;
     background-color: var(--bk_body);
-    color: var(--text_color);
-    font-family: var(--font_family);
 }
-
-/* =================================================================
-   3. ESTILIZAÇÃO DOS COMPONENTES E PADDING INTERNO
-   ================================================================ */
-header {
-    grid-area: header;
-    background: url(../imagens/baner.jpeg) no-repeat center center;
+header{
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    background-image: url(../imagens/baner.jpeg);
     background-size: cover;
+    background-position: center;
 }
-
+ul{
+    list-style: none;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+a{
+    text-decoration: none;
+    color: var(--link_color);
+}
 nav {
-    grid-area: nav;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 3;
     background-color: var(--bk_nav);
-    padding: 3px;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
 }
-
-main {
-    grid-area: content;
+main{
+    grid-row-start:4;
+    grid-row-end:5;
+    grid-column-start: 2;
+    grid-column-end: 3;
     background-color: var(--card_bg);
-    padding: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 30%;
+    grid-template-rows: 1fr 1fr;
 }
-
-aside {
-    grid-area: sidebar;
-    background-color: var(--card_bg);
-    padding: 5px;
-    border-left: 2px solid var(--border_color); /* Divisor clássico */
+main>article{
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    background-color: black;
 }
-
-footer {
-    grid-area: footer;
+#i1{
+    grid-row-start: 2;
+    grid-row-end: -1;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    width: 100%;
+    height: 100%;
+    background-color: #70a317;
+}
+#i2{
+    grid-row-start: 2;
+    grid-row-end: -1;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    width: 100%;
+    height: 100%;
+    background-color: #93e405;
+}
+#i3{
+    grid-row-start: 1;
+    grid-row-end: -1;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    background-color: aliceblue;
+    width: 100%;
+    height: 100%;
+}
+footer{
+    grid-row-start: 5;
+    grid-row-end: 6;
+    grid-column-start: 2;
+    grid-column-end: 3;
     background-color: var(--bk_footer);
-    padding: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
-/*
-    =================================================================
-    4. ESTILIZAÇÃO DE LINKS E BOTÕES
-    ================================================================
-*/
+address{
+    grid-row-start: -2;
+    grid-row-end: -1;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+address>p{
+    color: var(--text_color);
+}
