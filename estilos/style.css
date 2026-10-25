@@ -82,7 +82,7 @@ a {
     color: var(--link);
     text-decoration: none;
     padding: 7px;
-    border: 4px var(--bg-botao);
+    border: 4px green;
     border-style: groove;
     border-radius: 5px;
     background-color: var(--bg-botao);
@@ -94,10 +94,12 @@ a:hover {
 
 nav a {
     color: var(--link);
+    transition: 0.5s;
 }
 
 nav a:hover {
-    color: var(--hover);
+    color: #0dff00;
+    background-color: #302C25;
 }
 
 /* =================================================================
@@ -122,6 +124,8 @@ main > article {
 
     background-color: var(--fundo-claro);
     color: var(--texto-escuro);
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.645);
+    padding: 5px;
 }
 
 main a {
@@ -222,4 +226,25 @@ button {
 button:hover {
     background-color: var(--hover);
     color: var(--fundo);
+}
+
+header{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-top: 2px solid black;
+    border-right: 2px solid black;
+    border-left: 2px solid black;
+    overflow: hidden;
+}
+main {
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+    border-left: 2px solid black;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    overflow: hidden;
+}
+nav{
+    border-right: 2px solid black;
+    border-left: 2px solid black;
 }
